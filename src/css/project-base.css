@@ -1,0 +1,24 @@
+.body {
+  font-family: 'Poppins' !important;
+}
+/* _lg */
+@media only screen and (max-width: 1440px) {
+
+}
+
+/* _md */
+@media only screen and (max-width: 1020px) {
+}
+
+/* _sm */
+@media only screen and (max-width: 840px) {
+
+}
+
+/* _mobile */
+@media only screen and (max-width: 500px) {
+}
+
+.gradient-border{
+  border: 2px solid #1594E7;
+}
