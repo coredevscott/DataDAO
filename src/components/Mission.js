@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Navbar from './Home/Navbar';
-import Intro from './Whitepaper/IntroDelysium';
+import Intro from './Whitepaper/IntroMission';
 import Footer from './Home/Footer';
 
 function Mission () {
