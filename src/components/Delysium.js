@@ -6,18 +6,14 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Navbar from './Home/Navbar';
-import Intro from './Home/Intro';
-import Mission from './Home/Mission';
-import Benefit from './Home/Benefit';
-import Vision from './Home/Vision';
+import Intro from './Whitepaper/IntroDelysium';
 import Footer from './Home/Footer';
-import { QuestionAnswer } from '@mui/icons-material';
 
-function Landing () {
+function Delysium () {
     return (
-      <div className="App">
-        <div className='relative w-full h-full body'>
-          <div className='relative'>
+      <div className="h-screen App bg-[#0C0B15]">
+        <div className='relative w-full h-screen body'>
+          <div className='relative min-h-[650px]'>
             <img className='absolute top-0' src="./img/bg-intro.png"></img>
             <div className='absolute left-0 top-0 w-full h-full bg-gradient-to-b from-[#0A3641EE] to-[#0C0B15]'></div>
             {/* Lightning effect - left */}
@@ -33,13 +29,11 @@ function Landing () {
             <Navbar />
             <Intro />
           </div>
-          <Mission />
-          <Benefit />
-          <Vision />
+            
           <Footer />
         </div>
       </div>
     );
 }
 
-export default Landing;
+export default Delysium;

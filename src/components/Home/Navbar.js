@@ -4,10 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'HOME', href: '#', current: true },
-  { name: 'POLICY', href: '#', current: false },
-  { name: 'DELISIUM', href: '#', current: false },
-  { name: 'NODES', href: '#', current: false },
+  { name: 'HOME', href: '/', current: true },
+  { name: 'POLICY', href: '/policy', current: false },
+  { name: 'DELISIUM', href: '/delysium', current: false },
+  { name: 'NODES', href: '/nodes', current: false },
   { name: 'MYNODE', href: '#', current: false },
   { name: 'WHITEPAPER   ', href: '#', current: false },
 ]
