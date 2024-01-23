@@ -25,7 +25,6 @@ export default function Benefit() {
                         <Link to="/">WEB3</Link>
                         <Link to="/">Nodes</Link>
                         <Link to="/">My Nodes</Link>
-                        <Link to="/">WHITEPAPER</Link>
                     </div>
                     <div className="flex flex-col gap-3 text-left text-white">
                         <p className="font-bold">Community</p>
