@@ -1,5 +1,6 @@
-import { FaDiscord } from "react-icons/fa6";
-import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord, FaMedium } from "react-icons/fa6";
+import { FaGithub, FaTwitter, FaTelegramPlane } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 export default function Benefit() {
@@ -10,9 +11,11 @@ export default function Benefit() {
                     <div className="text-[#1587E7] flex items-start flex-shrink-0 font-semibold text-xl">DataDAO</div>
                     <div className="max-w-sm text-sm text-left text-white">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</div>
                     <div className="flex flex-row gap-5">
-                        <div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaTelegramPlane className="w-5 h-5"/></div>
-                        <div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaDiscord className="w-5 h-5"/></div>
-                        <div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaTwitter className="w-5 h-5"/></div>
+                        <a href="https://t.me/datadaoglobal" target="_blank"><div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaTelegramPlane className="w-5 h-5"/></div></a>
+                        <a href="https://discord.com/invite/wSBJCEMf2M" target="_blank"><div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaDiscord className="w-5 h-5"/></div></a>
+                        <a href="https://twitter.com/DataDaoCloud" target="_blank"><div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaTwitter className="w-5 h-5"/></div></a>
+                        <a href="https://medium.com/@clouddao5" target="_blank"><div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaMedium className="w-5 h-5"/></div></a>
+                        <a href="https://github.com/datadaocloud" target="_blank"><div className="border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaGithub className="w-5 h-5"/></div></a>
                     </div>
                 </div>
 
@@ -25,11 +28,12 @@ export default function Benefit() {
                         <Link to="/">WHITEPAPER</Link>
                     </div>
                     <div className="flex flex-col gap-3 text-left text-white">
-                        <Link to="/" className="font-bold">Community</Link>
-                        <Link to="/">Telegram</Link>
-                        <Link to="/">Medium</Link>
-                        <Link to="/">Discord</Link>
-                        <Link to="/">Twitter</Link>
+                        <p className="font-bold">Community</p>
+                        <a href="https://t.me/datadaoglobal" target="_blank">Telegram</a>
+                        <a href="https://medium.com/@clouddao5" target="_blank">Medium</a>
+                        <a href="https://discord.com/invite/wSBJCEMf2M" target="_blank">Discord</a>
+                        <a href="https://twitter.com/DataDaoCloud" target="_blank">Twitter</a>
+                        <a href="https://github.com/datadaocloud" target="_blank">Github</a>
                     </div>
                     <div className="flex flex-col gap-3 text-left text-white">
                         <Link to="/" className="font-bold">Subscribe Email</Link>

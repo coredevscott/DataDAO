@@ -9,7 +9,7 @@ import Navbar from './Home/Navbar';
 import Intro from './Whitepaper/IntroDelysium';
 import Footer from './Home/Footer';
 
-function Delysium () {
+function Mission () {
     return (
       <div className="h-screen App bg-[#0C0B15]">
         <div className='relative w-full h-screen body'>
@@ -36,4 +36,4 @@ function Delysium () {
     );
 }
 
-export default Delysium;
+export default Mission;

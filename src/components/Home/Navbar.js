@@ -6,10 +6,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'HOME', href: '/', current: true },
   { name: 'POLICY', href: '/policy', current: false },
-  { name: 'DELISIUM', href: '/delysium', current: false },
+  { name: 'MISSION', href: '/mission', current: false },
   { name: 'NODES', href: '/nodes', current: false },
   { name: 'MYNODE', href: '#', current: false },
-  { name: 'WHITEPAPER   ', href: '#', current: false },
+  { name: 'DOCS', href: 'https://datadao.gitbook.io/datadao/', current: false },
 ]
 
 function classNames(...classes) {
