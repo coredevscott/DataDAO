@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import Mission from './components/Mission';
 import Policy from './components/Policy';
 import Nodes from './components/Nodes';
+import MyNode from './components/MyNode';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/mission' element={<Mission />}></Route>
         <Route path='/policy' element={<Policy />}></Route>
         <Route path='/nodes' element={<Nodes />}></Route>
+        <Route path='/mynode' element={<MyNode />}></Route>
       </Routes>
     </BrowserRouter>
   );

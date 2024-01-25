@@ -7,7 +7,7 @@ export default function Intro() {
           <div className="max-w-xl mt-10 text-lg leading-8">
             Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
           </div>
-          <div className="cursor-pointer mt-16 bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] text-white sm:text-lg text-sm rounded-md py-3 px-8 font-semibold">
+          <div className="hover:translate-y-[-10px] transition-transform duration-700 ease-in-out cursor-pointer mt-16 bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] text-white sm:text-lg text-sm rounded-md py-3 px-8 font-semibold">
             APPLY FOR NODE
           </div>
         </div>

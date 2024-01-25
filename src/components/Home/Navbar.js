@@ -8,7 +8,7 @@ const navigation = [
   { name: 'POLICY', href: '/policy', current: false },
   { name: 'MISSION', href: '/mission', current: false },
   { name: 'NODES', href: '/nodes', current: false },
-  { name: 'MYNODE', href: '#', current: false },
+  { name: 'MYNODE', href: '/mynode', current: false },
   { name: 'DOCS', href: 'https://datadao.gitbook.io/datadao/', current: false },
 ]
 
