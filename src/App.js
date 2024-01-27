@@ -1,4 +1,3 @@
-import { List } from '@mui/material';
 import './App.css';
 import Landing from './components/Landing';
 import Mission from './components/Mission';

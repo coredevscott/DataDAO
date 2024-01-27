@@ -11,7 +11,6 @@ import Mission from './Home/Mission';
 import Benefit from './Home/Benefit';
 import Vision from './Home/Vision';
 import Footer from './Home/Footer';
-import { QuestionAnswer } from '@mui/icons-material';
 
 function Landing () {
     return (

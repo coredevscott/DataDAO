@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 const navigation = [
   { name: 'HOME', href: '/', current: true },
   { name: 'POLICY', href: '/policy', current: false },
@@ -55,7 +57,57 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-                <div className='gradient-border text-sm py-1 px-3 rounded-md flex items-center text-transparent bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] bg-clip-text cursor-pointer'>Connect Wallet</div>
+                
+                <ConnectButton.Custom>
+                  {({
+                      account,
+                      chain,
+                      openAccountModal,
+                      openChainModal,
+                      openConnectModal,
+                      authenticationStatus,
+                      mounted,
+                  }) => {
+                      const ready = mounted && authenticationStatus !== 'loading';
+                      const connected =
+                          ready &&
+                          account &&
+                          chain &&
+                          (!authenticationStatus ||
+                              authenticationStatus === 'authenticated');
+
+                      return (
+                          <div
+                              {...(!ready && {
+                                  'aria-hidden': true,
+                                  'style': {
+                                      opacity: 0,
+                                      pointerEvents: 'none',
+                                      userSelect: 'none',
+                                  },
+                              })}
+                          >
+                              {(() => {
+                                  if (!connected) {
+                                      return (
+                                          <button className="gradient-border text-sm py-1 px-3 rounded-md flex items-center text-transparent bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] bg-clip-text" onClick={openConnectModal} type="button">
+                                              Connect Wallet
+                                          </button>
+                                      );
+                                  }
+                                  return (
+                                      <div style={{ display: 'flex', gap: 12 }}>
+                                          <button className="gradient-border text-sm py-1 px-3 rounded-md flex items-center text-transparent bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] bg-clip-text" onClick={openAccountModal} type="button">
+                                              Disconnect Wallet
+                                          </button>
+                                      </div>
+                                  );
+                              })()}
+                          </div>
+                      );
+                  }}
+                </ConnectButton.Custom>
+                {/* <div className='gradient-border text-sm py-1 px-3 rounded-md flex items-center text-transparent bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] bg-clip-text cursor-pointer'>Connect Wallet</div> */}
               </div>
             </div>
           </div>
