@@ -9,7 +9,7 @@ export default function Benefit() {
             <div className="flex flex-col lg:justify-between lg:flex-row gap-7 lg:gap-0">
                 <div className="flex flex-col gap-7">
                     <div className="text-[#1587E7] flex items-start flex-shrink-0 font-semibold text-xl">DataDAO</div>
-                    <div className="max-w-sm text-sm text-left text-white">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</div>
+                    <div className="max-w-sm text-sm text-left text-white">By building a decentralized autonomous organization (DAO) specifically focused on data, we strive to empower individuals, foster trust, and drive innovation in the data economy.</div>
                     <div className="flex flex-row gap-5">
                         <a href="https://t.me/datadaoglobal" target="_blank"><div className="hover:translate-y-[-5px] transition-transform duration-700 ease-in-out border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaTelegramPlane className="w-5 h-5"/></div></a>
                         <a href="https://discord.com/invite/wSBJCEMf2M" target="_blank"><div className="hover:translate-y-[-5px] transition-transform duration-700 ease-in-out border border-[#104370] text-white p-2 rounded-md bg-[#0D3955] cursor-pointer"><FaDiscord className="w-5 h-5"/></div></a>

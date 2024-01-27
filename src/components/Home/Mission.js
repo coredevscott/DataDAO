@@ -7,7 +7,7 @@ export default function Mission() {
         <div className="flex flex-col items-center justify-center mx-auto max-w-7xl sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Mission</h2>
           <div className="max-w-4xl mt-10 leading-8 text-md">
-            Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Revolutionize the way data is managed, shared, and monetized through the power of blockchain technology. 
           </div>
           <div className="flex flex-col mt-20 lg:mt-10 lg:flex-row">
             <div className="flex flex-col min-w-[250px]">
