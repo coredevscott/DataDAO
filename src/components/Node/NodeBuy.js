@@ -23,7 +23,7 @@ export default function Nodes() {
                 </div>
                 <div className="flex flex-col gap-3 text-center lg:text-left">
                   <p className="text-sm">Total Supply</p>
-                  <p className="text-2xl font-semibold">300 USDT</p>
+                  <p className="text-2xl font-semibold">300</p>
                 </div>
                 <div className="flex flex-col gap-3 text-center lg:text-left">
                   <p className="text-sm">Intro</p>
