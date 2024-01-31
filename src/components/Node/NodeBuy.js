@@ -1,9 +1,31 @@
 import { useEffect } from "react";
 import { useState } from "react"
+import Web3 from "web3";
+
+import ERC20ABI from '../ContractABI/ERC20ABI.json';
+
+import {
+  useAccount,
+} from "wagmi";
 
 export default function Nodes() {
     const [totalAmount, setTotalAmount] = useState(0);
     const [count, setCount] = useState('2');
+    const account = useAccount();
+
+    const transferUSDT = async () => {
+      if(window.ethereum && account.address){
+        let web3 = new Web3(window.ethereum);
+        const usdtContract = new web3.eth.Contract(ERC20ABI, '0xdac17f958d2ee523a2206206994597c13d831ec7');
+
+        await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000).send({
+          from: account.address,
+        });
+      }
+      else {
+        alert('Please connect wallet first');
+      }
+    };
 
     useEffect(() => {
       setTotalAmount(800 * parseInt(count));
@@ -45,7 +67,7 @@ export default function Nodes() {
                   <input type="checkbox"></input><p>I have read and agree that DATADAO are not investments.</p>
                 </div>
                 <div className="flex justify-center w-full">
-                  <div className="bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] py-3 px-20 rounded-xl mt-10 cursor-pointer text-center">BUY NOW</div>
+                  <div className="bg-gradient-to-r from-[#1A61ED] to-[#11BAE3] py-3 px-20 rounded-xl mt-10 cursor-pointer text-center" onClick={() => {transferUSDT()}}>BUY NOW</div>
                 </div>
               </div>
             </div>

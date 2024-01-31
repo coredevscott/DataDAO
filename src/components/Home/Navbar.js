@@ -1,9 +1,11 @@
 import '../../css/project-base.css';
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from 'wagmi'
+import { useChainId } from 'wagmi';
 
 const navigation = [
   { name: 'HOME', href: '/', current: true },
@@ -19,6 +21,17 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const account = useAccount();
+  const chainId = useChainId();
+
+  useEffect(() => {
+    if(account.address){
+      console.log('----------------');
+      console.log(account.address);
+      console.log(chainId);
+    }
+  }, [account]);
+
   return (
     <Disclosure as="nav" className="relative">
       {({ open }) => (
