@@ -6,21 +6,56 @@ import ERC20ABI from '../ContractABI/ERC20ABI.json';
 
 import {
   useAccount,
+  useChainId,
+  useContractWrite
 } from "wagmi";
 
 export default function Nodes() {
     const [totalAmount, setTotalAmount] = useState(0);
     const [count, setCount] = useState('2');
     const account = useAccount();
+    const chainId = useChainId();
 
+    const { data: data1, isLoading: isLoading1, isSuccess: isSuccess1, write: write1 } = useContractWrite({
+      address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+      abi: ERC20ABI,
+      functionName: 'transfer',
+    });
+    
     const transferUSDT = async () => {
       if(window.ethereum && account.address){
         let web3 = new Web3(window.ethereum);
-        const usdtContract = new web3.eth.Contract(ERC20ABI, '0xdac17f958d2ee523a2206206994597c13d831ec7');
 
-        await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000).send({
-          from: account.address,
-        });
+        if(chainId == 1){ //Ethereum
+          const usdtContract = new web3.eth.Contract(ERC20ABI, '0xdac17f958d2ee523a2206206994597c13d831ec7');
+          await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000).send({
+            from: account.address,
+          });
+        }
+        else if(chainId == 56) {  //BSC
+          const usdtContract = new web3.eth.Contract(ERC20ABI, '0x55d398326f99059ff775485246999027b3197955');
+          await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000000000000000).send({
+            from: account.address,
+          });
+        }
+        else if(chainId == 137) { //Polygon
+          const usdtContract = new web3.eth.Contract(ERC20ABI, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f');
+          await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000).send({
+            from: account.address,
+          });
+        }
+        else if(chainId == 42161) { //Arbitrum
+          const usdtContract = new web3.eth.Contract(ERC20ABI, '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9');
+          await usdtContract.methods.transfer('0x48515F7d0B7280d59eCBE06d09B9EB7FEaDe73af', totalAmount * 1000000).send({
+            from: account.address,
+          });
+        }
+        else if(chainId == 369 ) { //Pulsechain
+          const usdtContract = new web3.eth.Contract(ERC20ABI, '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9');
+          await usdtContract.methods.transfer('0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f', totalAmount * 1000000000000000000).send({
+            from: account.address,
+          });
+        }
       }
       else {
         alert('Please connect wallet first');

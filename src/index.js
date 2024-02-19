@@ -15,7 +15,10 @@ import {
   base,
   bsc,
   zkSync,
-  sepolia 
+  sepolia,
+  arbitrum,
+  polygon,
+  pulsechain
 } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -36,7 +39,7 @@ import {
 const projectId = 'fe62b424c4ab666f47d64744e0b3dca0';
 
 const { chains, publicClient } = configureChains(
-  [mainnet, bsc, sepolia],
+  [mainnet, bsc, arbitrum, polygon, pulsechain],
   [
     alchemyProvider({ apiKey: 'ekZhZsGjfWuK39pYW_YXSEcRKDN8amSN' }),
     publicProvider()
